@@ -12,6 +12,7 @@ const SuspenseComponent = Component => props => {
 }
 
 const RecommendComponent = lazy(() => import("../application/Recommend"))
+const SingersComponent = lazy(() => import("../application/Singers"))
 
 export default [
   {
@@ -29,6 +30,10 @@ export default [
           {
             path: "/recommend",
             component: SuspenseComponent(RecommendComponent)
+          },
+          {
+            path: "/singers",
+            component: SuspenseComponent(SingersComponent)
           }
         ]
       }

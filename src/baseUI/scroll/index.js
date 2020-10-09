@@ -16,7 +16,7 @@ const PullUpLoading = styled.div`
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: px;
   height: 60px;
   width: 60px;
   margin: auto;
@@ -41,6 +41,8 @@ const Scroll = forwardRef((props, ref) => {
   const { direction, click, refresh, pullUpLoading, pullDownLoading, bounceTop, bounceBottom } = props;
 
   const { pullUp, pullDown, onScroll } = props;
+
+  console.log(direction)
 
   let pullUpDebounce = useMemo(() => {
     return debounce(pullUp, 500)
