@@ -42,8 +42,6 @@ const Scroll = forwardRef((props, ref) => {
 
   const { pullUp, pullDown, onScroll } = props;
 
-  console.log(direction)
-
   let pullUpDebounce = useMemo(() => {
     return debounce(pullUp, 500)
   }, [pullUp]);
